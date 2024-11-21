@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Añadir cliente</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/sweetalert/sweetalert2.min.css">
+  </head>
+  <body>
+    <main>
+      <div class="p-5">
+        <div class="d-flex align-items-center">
+          <div>
+            <h4>Añadir cliente</h4>
+          </div>
+          <div class="ml-4">
+            <a
+              class="btn btn-primary btn-md"
+              href="http://127.0.0.1:5500/index.html"
+              role="button"
+              >Volver</a
+            >
+          </div>
+        </div>
+        <form>
+          <div class="mt-4">
+            <div>
+              <div style="width: 800px" class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="ruc" class="form-label">RUC</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="ruc"
+                      placeholder="Ingresar ruc"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Ingresar email"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="compname" class="form-label"
+                      >Razón social</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="compname"
+                      placeholder="Ingresar Razón social"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="direction" class="form-label">Dirección</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="direction"
+                      placeholder="Ingresar dirección"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Celular</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Ingresar celular"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-md">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap/js"></script>
+    <script src="./lib/sweetalert/sweetalert2.min.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/addform.js"></script>
+  </body>
+</html>
