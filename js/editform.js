@@ -14,12 +14,14 @@ $(document).ready(async function () {
     }
 
     let client = dataclient.data;
+    console.log(client);
     $("#id").val(client.id);
     $("#ruc").val(client.ruc);
     $("#email").val(client.email);
     $("#compname").val(client.compname);
     $("#direction").val(client.direction);
     $("#phone").val(client.phone);
+    $("#active").prop("checked", client.active);
 
     $("form").submit(async function (event) {
       event.preventDefault();
@@ -30,6 +32,7 @@ $(document).ready(async function () {
       const compname = $("#compname").val().trim();
       const direction = $("#direction").val().trim();
       const phone = $("#phone").val().trim();
+      const active = $("#active").is(":checked") ? 1 : 0;
 
       const clientData = {
         id: id,
@@ -38,6 +41,7 @@ $(document).ready(async function () {
         compname: compname,
         direction: direction,
         phone: phone,
+        active: active,
       };
 
       const data = await updateClient(clientData);

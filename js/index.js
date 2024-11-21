@@ -26,8 +26,13 @@ function drawClients(listclients) {
                 <td>${client.email}</td>
                 <td>${client.direction}</td>
                 <td>${client.phone}</td>
-                <td><a class="btn btn-primary btn-md" href="http://127.0.0.1:5500/editform.html?id=${client.id}" role="button">Editar</a></td>
-                <td><button type="button" class="btn btn-danger btn-md" onclick="openAlertDelete(${client.id})">Eliminar</button></td>
+                <td>${client.active ? "Activo" : "Inactivo"}</td>
+                <td><a class="btn btn-primary btn-md" href="http://127.0.0.1:5500/editform.html?id=${
+                  client.id
+                }" role="button">Editar</a></td>
+                <td><button type="button" class="btn btn-danger btn-md" onclick="openAlertDelete(${
+                  client.id
+                })">Eliminar</button></td>
             </tr>
             `);
   });
